@@ -4,81 +4,84 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light Mode Theme - Scholarly & Clean */
+    --background: 210 17% 98%; /* #F8F9FA */
+    --foreground: 200 25% 22%; /* #2A3D45 - Main text color */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 17% 98%; /* #F8F9FA */
+    --card-foreground: 200 25% 22%; /* #2A3D45 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 17% 98%; /* #F8F9FA */
+    --popover-foreground: 200 25% 22%; /* #2A3D45 */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 200 25% 22%; /* #2A3D45 - Deep academic blue for interactive elements */
+    --primary-foreground: 210 17% 98%; /* Off-white text on primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 17% 93%; /* A slightly darker off-white or light gray */
+    --secondary-foreground: 200 25% 22%; /* Dark text on secondary */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 17% 93%;
+    --muted-foreground: 208 7% 48%; /* #6C757D - Gray for secondary text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 30 44% 64%; /* #D4A373 - Warm ochre/pale gold */
+    --accent-foreground: 200 25% 15%; /* Darker blue/gray for contrast on accent */
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 60.2%; /* Default, adjust if needed */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 17% 90%; /* #DEE2E6 - Light gray border */
+    --input: 210 17% 90%;
+    --ring: 30 44% 64%; /* #D4A373 - Accent color for focus ring */
 
-    --radius: 0.5rem;
+    --radius: 0.375rem; /* 6px, softer rounding */
 
+    /* Typography */
+    --font-sans: "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Source Serif Pro", "Noto Serif SC", Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-heading: "Manrope", "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    /* Sidebar colors - Kept from original as not specified in new design */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode Theme - Scholarly & Clean */
+    --background: 215 28% 14%; /* #1A202C - Very dark desaturated blue/gray */
+    --foreground: 213 27% 91%; /* #E0E7EF - Light text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 28% 14%;
+    --card-foreground: 213 27% 91%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 28% 14%;
+    --popover-foreground: 213 27% 91%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 213 27% 91%; /* Light color for interactive elements, like foreground */
+    --primary-foreground: 215 28% 14%; /* Dark text on primary, like background */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 28% 20%; /* Slightly lighter dark gray */
+    --secondary-foreground: 213 27% 91%; /* Light text on secondary */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 28% 20%;
+    --muted-foreground: 213 27% 70%; /* Less prominent light gray */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 31 64% 70%; /* #E5B181 - Brighter ochre/gold */
+    --accent-foreground: 215 28% 10%; /* Very dark text for contrast on accent */
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 30.6%; /* Default, adjust if needed */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 28% 25%; /* Mid-dark gray border */
+    --input: 215 28% 25%;
+    --ring: 31 64% 70%; /* #E5B181 - Accent color for focus ring */
+
+    /* Sidebar colors - Kept from original */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +100,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply base sans-serif font to body */
   }
+
+  /* Optionally, apply heading font to h1-h6 if desired globally */
+  /* h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  } */
 }
