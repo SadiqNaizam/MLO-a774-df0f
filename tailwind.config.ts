@@ -69,10 +69,14 @@ export default {
 				sm: 'calc(var(--radius) - 4px)' /* Will be 2px */
 			},
 			fontFamily: {
-        sans: 'var(--font-sans)',
-        serif: 'var(--font-serif)',
-        heading: 'var(--font-heading)',
-      },
+                // Updated to reference CSS variables which now include Noto Sans for Hindi/Telugu
+                sans: ['var(--font-sans)'],
+                serif: ['var(--font-serif)'],
+                heading: ['var(--font-heading)'],
+                // Added specific font stacks if direct Tailwind classes are preferred for these languages
+                'noto-devanagari': ['"Noto Sans Devanagari"', 'var(--font-sans)'],
+                'noto-telugu': ['"Noto Sans Telugu"', 'var(--font-sans)'],
+            },
 			keyframes: {
 				'accordion-down': {
 					from: {
