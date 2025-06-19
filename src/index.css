@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Noto Sans for Hindi and Telugu if not already globally available */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Telugu:wght@400;700&display=swap');
+
+
 @layer base {
   :root {
     /* Light Mode Theme - Scholarly & Clean */
@@ -36,9 +40,11 @@
     --radius: 0.375rem; /* 6px, softer rounding */
 
     /* Typography */
-    --font-sans: "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Noto Sans SC for Chinese, Noto Sans Devanagari for Hindi, Noto Sans Telugu for Telugu are added to the font stack */
+    --font-sans: "Inter", "Noto Sans SC", "Noto Sans Devanagari", "Noto Sans Telugu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: "Source Serif Pro", "Noto Serif SC", Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-heading: "Manrope", "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: "Manrope", "Inter", "Noto Sans SC", "Noto Sans Devanagari", "Noto Sans Telugu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 
     /* Sidebar colors - Kept from original as not specified in new design */
     --sidebar-background: 0 0% 98%;
@@ -107,4 +113,13 @@
   /* h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   } */
+}
+
+/* Specific font styles for elements if needed, e.g., for Hindi text areas */
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', var(--font-sans);
+}
+
+.font-telugu {
+  font-family: 'Noto Sans Telugu', var(--font-sans);
 }
